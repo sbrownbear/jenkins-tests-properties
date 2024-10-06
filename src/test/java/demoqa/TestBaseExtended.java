@@ -16,7 +16,8 @@ public class TestBaseExtended {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.baseUrl = "https://demoqa.com";
+//        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.baseUrl = System.getProperty("base_url", "https://demoqa.com");
         Configuration.pageLoadStrategy = "eager";
         Configuration.browserSize = "1920x1080";
         Configuration.browser = "chrome";
